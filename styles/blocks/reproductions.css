@@ -1,0 +1,153 @@
+.reproductions{
+    margin-top: 69px;
+}
+
+.reproductions__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.reproductions__header-header{
+    font-size: 40px;
+    font-weight: 300;
+}
+
+.reproductions__gallery{
+    margin-top: 30px;
+}
+
+.reproductions__gallery-tab{
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+
+.reproduction-card{
+    padding: 20px 20px 30px 20px;
+    background-color: var(--color-ligth-light-green);
+    max-width: 350px;
+}
+
+.card__image{
+    width: 310px;
+    height: 422px;
+}
+
+.card__author{
+    font-size: 18px;
+    color: var(--color-dark-gray);
+    margin-top: 20px;
+}
+
+.card__name{
+    font-size: 30px;
+    color: var(--color-black);
+    margin-top: 10px;
+}
+
+.card__card__descname{
+    font-size: 18px;
+    color: var(--color-black);
+    margin-top: 8px;
+}
+
+.card__price{
+    font-size: 24px;
+    color: var(--color-green);
+    margin-top: 30px;
+}
+
+.card__buy-btn{
+    width: 310px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .reproductions__gallery-tab{
+        display: grid;
+        grid-template-columns: 330px 330px;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    
+    .reproductions__header-header{
+        font-size: 30px;
+    }
+
+    .card__image{
+        width: 290px;
+        height: 422px;
+    }
+
+    .card__buy-btn{
+        width: 290px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .reproductions__header{
+        display: block;
+    }
+
+    .reproductions__header-tabs{
+        margin-top: 20px;
+    }
+
+    .reproductions__gallery-tab{
+        grid-template-columns: 240px 240px;
+    }
+
+    .card__image{
+        width: 200px;
+        height: 250px;
+    }
+
+    .card__author{
+        font-size: 16px;
+        margin-top: 15px;
+    }
+
+    .card__name{
+        font-size: 24px;
+    }
+
+    .card__card__descname{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .card__price{
+        font-size: 20px;
+    }
+
+    .card__buy-btn{
+        width: 200px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .reproductions{
+        margin-top: 60px;
+    }
+
+    .reproductions__header-header{
+        font-size: 24px;
+    }
+
+    .reproductions__gallery-tab{
+        grid-template-columns: 290px;
+    }
+
+    .card__image{
+        width: 250px;
+        height: 250px;
+    }
+
+    .card__buy-btn{
+        width: 250px;
+    }
+}

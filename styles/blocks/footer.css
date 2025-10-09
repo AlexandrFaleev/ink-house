@@ -1,0 +1,98 @@
+.footer{
+    background-color: var(--color-ligth-light-green);
+    margin-top: 70px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+}
+
+.footer__main{
+    display: flex;
+}
+
+.footer__logo-and-phone{
+    margin-right: 115px;
+}
+
+.footer__logo{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.logo__img{
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+
+.footer__phone{
+    display: block;
+    margin-top: 35px;
+}
+
+.phone__link{
+    font-size: 20px;
+    color: var(--color-black);
+
+}
+
+.phone__caption{
+    font-size: 18px;
+    color: var(--color-dark-gray);
+    margin-top: 8px;
+}
+
+.logo__name{
+    font-size: 20px;
+    color: var(--color-green);
+}
+
+.footer__columns{
+    display: flex;
+    column-gap: 60px;
+}
+
+.footer__column,
+.footer__column-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.footer__column-item a{
+    font-size: 18px;
+    color: var(--color-dark-gray);
+}
+
+.footer__column-header{
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--color-black);
+}
+
+.footer__contacts{
+    margin-left: auto;
+}
+
+.contacts__socials{
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.contancts__info{
+    margin-top: 10px;
+}
+
+.contacts__info-block{
+    font-size: 12px;
+    color: var(--color-dark-gray);
+
+    &:last-child{
+        margin-top: 8px;
+    }
+}
+
+.socials__item{
+    display: block;
+}

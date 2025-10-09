@@ -1,0 +1,317 @@
+.header__nav{
+    background-color: var(--color-ligth-light-green);
+    padding-top: 33px;
+    padding-bottom: 32px;
+}
+
+.header__menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__company-logo{
+    display: inline-flex;
+    align-items: center;
+    column-gap: 8px;
+    
+    & a{
+        color: var(--color-green);
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+.header__menu-list{
+    display: flex;
+    column-gap: 80px;
+}
+
+.header__menu-item{
+
+    & a{
+        color: var(--color-black);
+        font-size: 20px;
+        transition: var(--transition);
+        
+        &:hover{
+            color: var(--color-green);
+
+            & img{
+                stroke: var(--color-green);
+            }
+        }
+
+        &:focus{
+            background-color: var(--color-light-green);
+        }
+    }
+
+    & a.icon-cart{
+        &::after{
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            background-image: url('/icons/cart_icon.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 50 50;
+            transition: var(--transition);
+        }
+
+        &:hover{
+            &::after{
+                background-image: url('/icons/cart_icon_hover.svg');
+            }
+        }
+    }
+}
+
+.header__main{
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+
+.header__birg-image{
+    display: block;
+    width: 540px;
+    height: 621px;
+}
+
+.header__main-header{
+    font-size: 60px;
+    line-height: 1.1em;
+    font-weight: 300;
+
+    & span{
+        color: var(--color-green);
+    }
+}
+
+.header__main-offer{
+    font-size: 18px;
+    color: var(--color-dark-gray);
+    margin-top: 20px;
+}
+
+.header__production-btn{
+    margin-top: 60px;
+}
+
+.header__burger-btn{
+    display: none;
+}
+
+.header__burger-menu{
+    display: none;
+}
+
+
+@media screen and (max-width: 1200px) {
+    
+    .header__menu-list{
+        display: flex;
+        column-gap: 60px;
+    }
+    
+    .header__menu-item{
+
+        & a{
+            color: var(--color-black);
+            font-size: 18px;
+            transition: var(--transition);
+            
+            &:hover{
+                color: var(--color-green);
+
+                & img{
+                    stroke: var(--color-green);
+                }
+            }
+
+            &:focus{
+                background-color: var(--color-light-green);
+            }
+        }
+
+        & a.icon-cart{
+            &::after{
+                content: '';
+                display: block;
+                width: 22px;
+                height: 22px;
+                background-image: url('/icons/cart_icon.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: 50 50;
+                transition: var(--transition);
+            }
+
+            &:hover{
+                &::after{
+                    background-image: url('/icons/cart_icon_hover.svg');
+                }
+            }
+        }
+    }
+
+    .header__birg-image{
+        width: 330px;
+        height: 380px;
+    }
+
+    .header__main-header{
+        font-size: 40px;
+        line-height: 1em;
+    }
+
+    .header__production-btn{
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .header__menu{
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    .header__menu-list{
+        border-top: 1px var(--color-gray-and-green) solid;
+        padding-top: 16px;
+    }
+
+    .header__birg-image{
+        width: 195px;
+        height: 239px;
+    }
+
+    .header__main{
+        margin-top: 50px;
+    }
+
+    .header__main-header{
+        font-size: 36px;
+    }
+
+    .header__main-offer{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .header__production-btn{
+        margin-top: 11px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .header__menu{
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .header__nav{
+        background-color: transparent;
+        padding-bottom: 0;
+    }
+
+    .header__company-logo{
+        margin-bottom: 16px;
+    }
+    
+    .header__menu-list{
+        width: 100%;
+        background-color: var(--color-ligth-light-green);
+        padding: 20px 15px;
+        justify-content: space-between;
+        align-items: center;
+        gap: unset;
+        border-top: unset;
+    }
+
+    .mobile-hide{
+        display: none;
+    }
+
+    .header__burger-btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        margin-right: auto;
+
+        &.open-btn{
+            row-gap: 6px;
+        }
+
+        & span{
+            display: block;
+            width: 21px;
+            height: 2px;
+            background-color: var(--color-black-alternate);
+        }
+
+        &.close-btn{
+            margin-top: 15px;
+            margin-left: 16px;
+            
+            & span:nth-child(1){
+                transform: rotateZ(45deg);
+            }
+
+            & span:nth-child(2){
+                margin-top: -2px;
+                transform: rotateZ(-45deg);
+            }
+        }
+    }
+
+    .header__menu-item:last-child{
+        margin-left: auto;
+    }
+
+    .header__birg-image{
+        display: none;
+    }
+
+    .header__main{
+        margin-top: 60px;
+    }
+
+    .header__burger-menu.active{
+        display: block;
+        width: 100%;
+        height: 200vh;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        z-index: 100;
+        background-color: var(--color-ligth-light-green);
+        overflow: hidden;
+    }
+
+    .header__burger-menu-list{
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+
+    .header__burger-menu-item{
+        &:not(:last-child){
+            margin-bottom: 50px;
+        }
+
+        & a{
+            font-size: 18px;
+            color: var(--color-black);
+        }
+    }
+
+    .header__production-btn{
+        margin-top: 40px;
+    }
+}
