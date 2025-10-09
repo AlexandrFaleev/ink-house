@@ -1,5 +1,5 @@
 .new-collection{
-    background-image: url('../images/new_collection_background.jpg');
+    background-image: url('/images/new_collection_background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
