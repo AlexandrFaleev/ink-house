@@ -1,4 +1,4 @@
 # Страница ink. House
 ___
-![Картинка с птицей](images/new_collection_background.jpg)
+![Картинка](images/new_collection_background.jpg)
 ##### Адаптивная страница, написанная в методологии БЭМ (блоки, элементы, модификаторы).
