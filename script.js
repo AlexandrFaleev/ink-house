@@ -28,5 +28,54 @@ function CreateTabs(selector){
     });
 }
 
+class shopCart{
+	constructor(){
+		this.marketCatalog = document.querySelector('[data-js-market]')
+		this.cartButton = document.querySelector('[data-js-cart-info]')
+		this.cart = new Array()
+		this.init()
+	}
+	
+	//Добавление товара в корзину
+	addToCart(selectedItem){
+		if(this.cart.find(e => e === selectedItem.parentNode.querySelector('[data-js-product-name]').textContent.trim())){
+            alert('Товар уже есть в корзине!')
+        } else{
+            this.cart.push(selectedItem.parentNode.querySelector('[data-js-product-name]').textContent.trim())
+            sessionStorage.setItem('shopCart', JSON.stringify(this.cart))
+            this.updateCart()
+        }
+	}
+	
+	//Обновление статус-бара корзины
+	updateCart(){
+		if(this.cart.length > 0){
+            this.cartButton.style.display = 'flex'
+            this.cartButton.innerHTML = this.cart.length
+        }
+		else{
+            this.cartButton.innerHTML = ''
+            this.cartButton.style.display = 'none'
+        }
+	}
+	
+	//Инициализация и привязка функций
+	init(){
+		if(sessionStorage.getItem('shopCart'))
+			this.cart = JSON.parse(sessionStorage.getItem('shopCart'))
+		else{
+			sessionStorage.setItem('shopCart', JSON.stringify([]))
+			this.cart = JSON.parse(sessionStorage.getItem('shopCart'))
+		}
+        this.marketCatalog.addEventListener('click', (event) => {
+            const clickedItem = event.target
+            if(clickedItem.hasAttribute('data-js-add-to-cart'))
+                this.addToCart(clickedItem)
+        })
+		this.updateCart()
+	}
+}
+
 CreateHeaderBurgerBtn();
 CreateTabs("reproductions");
+const userCart = new shopCart();

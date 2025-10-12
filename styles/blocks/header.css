@@ -48,11 +48,15 @@
     }
 
     & a.icon-cart{
+        width: 24px;
+        height: 24px;
+        position: relative;
+
         &::after{
             content: '';
             display: block;
-            width: 24px;
-            height: 24px;
+            width: 100%;
+            height: 100%;
             background-image: url('/ink-house/icons/cart_icon.svg');
             background-repeat: no-repeat;
             background-size: contain;
@@ -62,10 +66,25 @@
 
         &:hover{
             &::after{
-                background-image: url('/ink-house/icons/cart_icon_hover.svg');
+                background-image: url('/ink-house/icons/cart_icon.svg');
             }
         }
     }
+}
+
+.cart__info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 2px;
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: var(--color-green);
+    position: absolute;
 }
 
 .header__main{
@@ -151,7 +170,7 @@
 
             &:hover{
                 &::after{
-                    background-image: url('/ink-house/icons/cart_icon_hover.svg');
+                    background-image: url('/ink-house/icons/cart_icon.svg');
                 }
             }
         }
